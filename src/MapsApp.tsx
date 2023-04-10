@@ -1,8 +1,15 @@
 import { PlacesProvider } from './context/places/PlacesProvider';
+import { HomeScreen } from './screens/HomeScreen';
+
+import './styles.css';
+import { MapProvider } from './context/map/MapProvider';
+
 export const MapsApp = () => {
     return (
         <PlacesProvider>
-            <h1>Hola Mundo</h1>
+            <MapProvider>
+                <HomeScreen />
+            </MapProvider>
         </PlacesProvider>
     )
 }
